@@ -1,0 +1,4 @@
+# Project exclude paths
+/lab-client/target/
+/lab-common/target/
+/lab-server/target/
