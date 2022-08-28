@@ -31,11 +31,11 @@ public class RouteMaker {
         outputManager.println("Enter route data");
         String name = asker.ask(arg -> (arg).length() > 0, "Enter name (String)",
                 ERROR_MESSAGE, "The string must not be empty", x -> x, false);
-        long distance = asker.ask(arg -> true, "Enter distance (long)", ERROR_MESSAGE,
-                ERROR_MESSAGE, Long::parseLong, false);
         Coordinates coordinates = askForCoordinates(); //not null
         LocationFrom from = askForLocationFrom(); //not null
         LocationTo to = askForLocationTo(); //not null
+        long distance = asker.ask(arg -> true, "Enter distance (long)", ERROR_MESSAGE,
+                ERROR_MESSAGE, Long::parseLong, false);
         return new Route(name, coordinates, from, to, distance);
     }
 
